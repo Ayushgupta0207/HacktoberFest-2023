@@ -1,69 +1,22 @@
-:root{
-    --base-shade-1:#00a8fa;
-    --white-shade-1:#ffff;
-    --white-shade-2:#d7f1e3;
-    --black-shade-1:#232323;
-    --black-shade-2:#676a8b;
-    --grad-color-1: 0,180,250;
-    --grad-color-2:21,120,255;
-
-
-    --base-font-size:1.6rem;
-
-    --heading-font-size-1:4rem;
-    --heading-font-size-2:3.2rem;
-    --heading-font-size-3:2rem;
-    --heading-font-size-4:1.8rem;
-
-
-    --border-radius-1:1rem;
-    --border-radius-2:0.5rem;
+#heading{
+    color:black;
+    text-align: center;
+    
 }
 
-
-*,
-*:before,*::after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+#line{
+    color:pink;
+}
+#table{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    margin-top:20px;
+}
+#th{
+    background-color:darkgrey;
 }
 
-body{
-    font-family: "Poppins",sans-serif;
-}
-html{
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-}
-
-header{
-    position: fixed;
-    width: 98%;
-    padding: 3rem 5rem;
-}
-
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul{
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-
-}
-
-nav a{
-    font-size: var(--heading-font-size-4);
-}
-
-nav a#logo{
-    color: var(--black-shade-1);
-    font-weight: 700;
-}
-
-nav ul a{
-    color: var(--black-shade-1);
-}
+table tr:nth-child(2n) td {
+    background-color:darkgrey;
+  }

@@ -72,7 +72,6 @@
     <audio id="myAudio">
       <source src="music.mp3" type="audio/ogg">
     </audio>
-    
     <script>
       var x = document.getElementById("myAudio"); 
       
@@ -91,6 +90,8 @@
     </script>
 
 
+
+
       <!-- <button onclick="myFunction()">Toggle dark mode</button> -->
 
     <script>
@@ -99,7 +100,17 @@
         element.classList.toggle("dark-mode");
         }
     </script>
-      
+     <script> function myFunction() {
+      var element = document.body;
+      if (element.style.backgroundColor === "black" || element.style.backgroundColor === "") {
+        element.style.backgroundColor = "#000"; // Set your desired dark background color here
+        element.style.color = "#fff"; // Set text color for dark mode
+      } else {
+        element.style.backgroundColor = ""; // Reset to the default background color
+        element.style.color = ""; // Reset to the default text color
+      }
+    }</script>
+       
     
 
     <script src="https://connect.facebook.net/en_US/fbinstant.6.3.js"></script>

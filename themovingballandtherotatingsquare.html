@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+      body {
+        background-color: whitesmoke;
+        user-select: none;
+      }
+      h1 {
+        font-size: 30px;
+        font-family: sans-serif;
+        text-indent: 14pc;
+        position: relative;
+        bottom: 20px;
+      }
+      .ball {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 200%;
+        position: relative;
+        top: 20pc;
+        left: 23pc;
+        animation-name: ballMove;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes ballMove {
+        0% {
+          background-color: rgb(245, 78, 78);
+          left: 0px;
+          top: 0px;
+        }
+        25% {
+          background-color: rgb(231, 231, 49);
+          left: 815px;
+          top: 0px;
+        }
+        50% {
+          background-color: cyan;
+          left: 815px;
+          top: 350px;
+        }
+        75% {
+          background-color: rgb(24, 230, 24);
+          left: 0px;
+          top: 350px;
+        }
+        100% {
+          background-color: rgb(245, 78, 78);
+          left: 0px;
+          top: 0px;
+        }
+      }
+      .square {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        top: -0pc;
+        left: 448px;
+        animation-name: arrowMove;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes arrowMove {
+        0% {
+          rotate: 0deg;
+          animation-duration: 5s;
+          background-color: rgb(245, 78, 78);
+          border-radius: 0%;
+        }
+        25% {
+          rotate: 360deg;
+          animation-duration: 5s;
+          background-color: rgb(231, 231, 49);
+          border-radius: 15px;
+        }
+        50% {
+          rotate: 360deg;
+          animation-duration: 5s;
+          background-color: cyan;
+          border-radius: 20px;
+        }
+        75% {
+          rotate: 0deg;
+          animation-duration: 5s;
+          background-color: rgb(24, 230, 24);
+          border-radius: 25px;
+        }
+        100% {
+          rotate: 360deg;
+          animation-duration: 5s;
+          background-color: rgb(245, 78, 78);
+          border-radius: 30px;
+        }
+      }
+    </style>
+    <title>The Moving Ball & The Rotating Square</title>
+  </head>
+  <body>
+    <nav>
+      <h1>The Moving Ball & The Rotating Square</h1>
+    </nav>
+    <div class="ball"></div>
+    <div class="square"></div>
+  </body>
+</html>

@@ -5,100 +5,152 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">  
 <style>  
 body{  
-  font-family: Calibri, Helvetica, sans-serif;  
-  background-color: pink;  
+  font-family: Arial, Helvetica, sans-serif;
+  background: color #f2f2f2;;  
+  margin: 0;
+  padding: 0;
 }  
 .container {  
-    padding: 50px;  
-  background-color: lightblue;  
-}  
-  
-input[type=text], input[type=password], textarea {  
-  width: 100%;  
-  padding: 15px;  
-  margin: 5px 0 22px 0;  
-  display: inline-block;  
-  border: none;  
-  background: #f1f1f1;  
-}  
-input[type=text]:focus, input[type=password]:focus {  
-  background-color: orange;  
-  outline: none;  
-}  
- div {  
-            padding: 10px 0;  
-         }  
+     
+  background-color:#ffffff; 
+  padding: 20px; 
+  margin: 50px auto;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px; } 
+  h1 {
+            text-align: center;
+            color: #333;
+        }
+
+ 
 hr {  
   border: 1px solid #f1f1f1;  
   margin-bottom: 25px;  
 }  
+  
+input[type=text], input[type=password], textarea,
+select{  
+  width: 100%;  
+  padding: 12px;  
+  margin: 8px  0;  
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;  
+  background-color: #f8f8f8;  
+}  
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus,
+select:focus{  
+  background-color: rgb(229, 224, 215);  
+  outline: none;  
+}
+.radio-group {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .radio-group label {
+            margin-right: 10px;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+ 
 .registerbtn {  
   background-color: #4CAF50;  
   color: white;  
-  padding: 16px 20px;  
-  margin: 8px 0;  
+  padding: 16px 20px;    
   border: none;  
   cursor: pointer;  
-  width: 100%;  
-  opacity: 0.9;  
+  width: 100%;   
+  width: 100%;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
 }  
 .registerbtn:hover {  
-  opacity: 1;  
+  background-color: #45a049;
 }  
+.registerbtn-container {
+            position: relative;
+        }
+        .registerbtn-container img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .registerbtn-container:hover img {
+            opacity: 1;
+        }
 </style>  
 </head>  
 <body>  
 <form>  
   <div class="container">  
-  <center>  <h1> Student Registeration Form</h1> </center>  
+  <h1> Student Registeration Form</h1>  
   <hr>  
-  <label> Firstname </label>   
-<input type="text" name="firstname" placeholder= "Firstname" size="15" required />   
+  <label for="firstname"> Firstname :</label>   
+<input type="text" name="firstname" placeholder= "Firstname"  required />   
 <label> Middlename: </label>   
-<input type="text" name="middlename" placeholder="Middlename" size="15" required />   
+<input type="text" name="middlename" placeholder="Middlename"  required />   
 <label> Lastname: </label>    
-<input type="text" name="lastname" placeholder="Lastname" size="15"required />   
+<input type="text" name="lastname" placeholder="Lastname" required />   
 <div>  
-<label>   
-Course :  
-</label>   
+    <label for="course" >   Course :  </label>   
   
-<select>  
-<option value="Course">Course</option>  
-<option value="BCA">BCA</option>  
-<option value="BBA">BBA</option>  
-<option value="B.Tech">B.Tech</option>  
-<option value="MBA">MBA</option>  
-<option value="MCA">MCA</option>  
-<option value="M.Tech">M.Tech</option>  
-</select>  
+    <select  name="course">  
+       <option value="Course">Course</option>  
+       <option value="BCA">BCA</option>  
+       <option value="BBA">BBA</option>  
+       <option value="B.Tech">B.Tech</option>  
+       <option value="MBA">MBA</option>  
+       <option value="MCA">MCA</option>  
+       <option value="M.Tech">M.Tech</option>  
+    </select>  
 </div>  
-<div>  
-<label>   
-Gender :  
-</label><br>  
-<input type="radio" value="Male" name="gender" checked > Male   
-<input type="radio" value="Female" name="gender"> Female   
-<input type="radio" value="Other" name="gender"> Other  
+<div  class="radio-group">  
+     <label>   Gender :  </label> 
+     <input type="radio" value="Male" name="gender" checked > Male   
+     <input type="radio" value="Female" name="gender"> Female   
+     <input type="radio" value="Other" name="gender"> Other  
   
 </div>  
-<label>   
-Phone :  
-</label>  
-<input type="text" name="country code" placeholder="Country Code"  value="+91" size="2"/>   
-<input type="text" name="phone" placeholder="phone no." size="10"/ required>   
-Current Address :  
-<textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
-</textarea>  
- <label for="email"><b>Email</b></label>  
- <input type="text" placeholder="Enter Email" name="email" required>  
-  
-    <label for="psw"><b>Password</b></label>  
-    <input type="password" placeholder="Enter Password" name="psw" required>  
-  
-    <label for="psw-repeat"><b>Re-type Password</b></label>  
-    <input type="password" placeholder="Retype Password" name="psw-repeat" required>  
-    <button type="submit" class="registerbtn">Register</button>    
+<label for="phone">    Phone :  </label>  
+  <div>
+     <input type="text" name="countrycode" placeholder="Country Code"  value="+91" size="2"/>   
+     <input type="text" name="phone" placeholder="phone no." required>  
+  </div> 
+
+  <label for="address">Current Address:</label>
+  <textarea name="address" cols="80" rows="5" placeholder="Current Address" required></textarea>
+
+  <label for="email">Email:</label>
+  <input type="text" placeholder="Enter Email" name="email" required>
+
+  <label for="password">Password:</label>
+  <input type="password" placeholder="Enter Password" name="password" required>
+
+  <label for="password-repeat">Re-type Password:</label>
+  <input type="password" placeholder="Retype Password" name="password-repeat" required>
+
+  <div class="button-container">
+      <div class="registerbtn-container">
+          <button type="submit" class="registerbtn">Register</button>
+        
+      </div>
+  </div>
+</div>
 </form>  
 </body>  
 </html>  

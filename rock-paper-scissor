@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock Paper Scissors</title>
+		<!-- Can use multiple link elements -> multiple css files. -->
+		<link rel="stylesheet" href="rock-paper-scissors.css" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="images/rock-paper-scissors-icon.png" />
+	</head>
+	<body>
+		<div class="title-container">
+			<p class="title">Rock Paper Scissors</p>
+			<img
+				alt="Rock Paper Scissors Icon"
+				src="images/rock-paper-scissors-icon.png"
+				class="icon" />
+		</div>
+
+		<div class="button-container">
+			<button class="move-button js-rock-button">
+				<img alt="Rock Emoji" src="images/rock-emoji.png" class="move-icon" />
+			</button>
+			<button class="move-button js-paper-button">
+				<img alt="Paper Emoji" src="images/paper-emoji.png" class="move-icon" />
+			</button>
+			<button class="move-button js-scissors-button">
+				<img
+					alt="Scissors Emoji"
+					src="images/scissors-emoji.png"
+					class="move-icon" />
+			</button>
+		</div>
+		<p class="js-result result"></p>
+
+		<p class="you-computer"></p>
+
+		<p class="js-moves-chosen"></p>
+		<p class="js-score score">Wins: 0, Losses: 0, Ties: 0</p>
+
+		<div class="button-wrapper">
+			<button class="reset-score-button js-reset-score-button">
+				Reset Score (Backspace)</button
+			><button class="auto-play-button js-auto-play-button">
+				Auto Play (A)
+			</button>
+		</div>
+
+		<div class="js-confirmation-container"></div>
+
+		<p class="info">Use your keyboard or click on the buttons above to play.</p>
+		<div class="keybind-list-wrapper">
+			<ul class="keybind-list">
+				<li>R - Rock</li>
+				<li>P - Paper</li>
+				<li>S - Scissors</li>
+			</ul>
+		</div>
+		<!-- You can use multiple script elements. Loaded from top to bottom. -->
+		<script src="rock-paper-scissors.js"></script>
+	</body>
+</html>

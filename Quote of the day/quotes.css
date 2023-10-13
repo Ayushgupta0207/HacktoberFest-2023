@@ -1,0 +1,25 @@
+body
+{
+    text-align: center;
+}
+h1{
+    font-size: 80px;
+    font-family: Impact;
+}
+button
+{
+    width: 250px;
+    height: 80px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+button:hover
+{
+    background-color: #303438;
+    ;
+}
+p{
+    font-size: 35px;
+}
